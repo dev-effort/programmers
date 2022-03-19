@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "participant": ["leo", "kiki", "eden"],
+      "completion": ["eden", "kiki"],
+      "result": "leo"
+    },
+    {
+      "participant": ["marina", "josipa", "nikola", "vinko", "filipa"],
+      "completion": ["josipa", "filipa", "marina", "nikola"],
+      "result": "vinko"
+    },
+    {
+      "participant": ["mislav", "stanko", "mislav", "ana"],
+      "completion": ["stanko", "ana", "mislav"],
+      "result": "mislav"
+    }
+  ]
+}
