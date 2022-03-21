@@ -19,15 +19,13 @@ const solution = (participant, completion) => {
   for (let [k, v] of participantMap) {
     if (v === 1) return k;
   }
-
-  mockData.data.map((data) => {
-    const result = solution(data.participant, data.completion);
-    if (result === data.result) {
-      console.log(`예상되는 결과: ${data.result}와 결과값이 같습니다`);
-    } else {
-      console.log(
-        `예상되는 결과: ${data.result}, 결과값: ${result}로 다릅니다`
-      );
-    }
-  });
 };
+
+mockData.data.map((data) => {
+  const result = solution(data.participant, data.completion);
+  if (result === data.result) {
+    console.log(`예상되는 결과: ${data.result}와 결과값이 같습니다`);
+  } else {
+    console.log(`예상되는 결과: ${data.result}, 결과값: ${result}로 다릅니다`);
+  }
+});
