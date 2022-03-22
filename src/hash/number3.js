@@ -13,8 +13,14 @@ const solution = (clothes, result) => {
   });
 
   const clothMap = [...map];
+  const addCloth = clothMap.map((data) => {
+    return data[1] + 1;
+  });
 
-  console.log("clothMap:", clothMap);
+  const sol = addCloth.reduce((acc, cur) => (acc = acc * cur));
+
+  console.log("result: ", result, " solution: ", sol - 1);
+  return sol - 1;
 };
 
 mockData.data.forEach((data) => solution(data.clothes, data.result));
