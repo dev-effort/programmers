@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "clothes": [
+        ["yellowhat", "headgear"],
+        ["bluesunglasses", "eyewear"],
+        ["green_turban", "headgear"]
+      ],
+      "result": 5
+    },
+    {
+      "clothes": [
+        ["crowmask", "face"],
+        ["bluesunglasses", "face"],
+        ["smoky_makeup", "face"]
+      ],
+      "result": 3
+    }
+  ]
+}
