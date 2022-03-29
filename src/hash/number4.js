@@ -45,14 +45,24 @@ const solution = (genres, plays) => {
   return result;
 };
 
+const printResult = (result, answer) => {
+  if (Array.isArray(result)) {
+    if (JSON.stringify(result) === JSON.stringify(answer)) {
+      console.log(`예상되는 결과: ${answer}와 결과값이 같습니다`);
+    } else {
+      console.log(`예상되는 결과: ${answer} 결과값: ${result}로 다릅니다`);
+    }
+  } else {
+    if (result === answer) {
+      console.log(`예상되는 결과: ${answer}와 결과값이 같습니다`);
+    } else {
+      console.log(`예상되는 결과: ${answer} 결과값: ${result}로 다릅니다`);
+    }
+  }
+};
+
 mockData.data.map((data) => {
   const result = solution(data.genres, data.plays);
 
-  console.log("result:", result);
-  console.log("data.result", data.result);
-  if (result === data.result) {
-    console.log(`예상되는 결과: ${data.result}와 결과값이 같습니다`);
-  } else {
-    console.log(`예상되는 결과: ${data.result} 결과값: ${result}로 다릅니다`);
-  }
+  printResult(result, data.result);
 });

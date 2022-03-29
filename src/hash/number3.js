@@ -19,8 +19,26 @@ const solution = (clothes, result) => {
 
   const sol = addCloth.reduce((acc, cur) => (acc = acc * cur));
 
-  console.log("result: ", result, " solution: ", sol - 1);
   return sol - 1;
 };
 
-mockData.data.forEach((data) => solution(data.clothes, data.result));
+const printResult = (result, answer) => {
+  if (Array.isArray(result)) {
+    if (JSON.stringify(result) === JSON.stringify(answer)) {
+      console.log(`예상되는 결과: ${answer}와 결과값이 같습니다`);
+    } else {
+      console.log(`예상되는 결과: ${answer} 결과값: ${result}로 다릅니다`);
+    }
+  } else {
+    if (result === answer) {
+      console.log(`예상되는 결과: ${answer}와 결과값이 같습니다`);
+    } else {
+      console.log(`예상되는 결과: ${answer} 결과값: ${result}로 다릅니다`);
+    }
+  }
+};
+
+mockData.data.forEach((data) => {
+  const result = solution(data.clothes, data.result);
+  printResult(result, data.result);
+});
